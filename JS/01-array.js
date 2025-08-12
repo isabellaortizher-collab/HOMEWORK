@@ -7,6 +7,10 @@ console.log(numeros1.at(-1)); // 40
 let numeros2 = [1, 2];
 console.log(numeros2.concat([3, 4])); // [1, 2, 3, 4]
 
+let numeros = [1, 2, 3];
+console.log(numeros.constructor); 
+// ƒ Array() { [native code] }
+
 // copyWithin()
 let numeros3 = [1, 2, 3, 4, 5];
 console.log(numeros3.copyWithin(0, 3)); // [4, 5, 3, 4, 5]
