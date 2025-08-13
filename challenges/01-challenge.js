@@ -13,3 +13,9 @@ const funcionFlecha = (numero) => {
 // Pruebas
 console.log(funcionRegular(4));  // Par
 console.log(funcionFlecha(7));   // Impar
+// Diferencias principales:
+// 1. Las Arrow Functions no tienen su propio 'this', usan el 'this' del contexto donde se crean.
+// 2. No pueden usarse como constructores (no tienen 'prototype').
+// 3. Tienen una sintaxis más corta.
+// 4. No tienen el objeto 'arguments' propio.
+
