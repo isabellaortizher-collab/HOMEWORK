@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Child from "./Child";
 
 function App () {
   const [category, setCategory] = useState("");
