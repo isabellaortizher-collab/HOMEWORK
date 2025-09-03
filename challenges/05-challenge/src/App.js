@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useCallback } from "react";
+import { Child } from "./Child.js";
 
-function App() {
+export default function App() {
+  const list = [2, 4, 6, 8, 10];
+  const [valor, setValor] = useState(0);
+
+  const increment = useCallback(
+    (num) => {
+      setValor((prev) => prev + num);
+    },
+    []
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Resultado</h1>
+      <p>Total: {valor}</p>
+      <hr />
+
+      {list.map((n, idx) => (
+        <Child key={idx} numero={n} increment={increment} />
+      ))}
     </div>
   );
 }
 
-export default App;
+
