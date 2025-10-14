@@ -1,24 +1,15 @@
 import React from "react";
-import Login from "./componentes/Login";
-import Logout from "./componentes/Logout";
-import { useSelector } from "react-redux";
+import { Login } from "./componentes/Login";
 
 function App() {
-  const user = useSelector((state) => state.auth.user);
-
   return (
-    <div>
-      {user ? (
-        <>
-          <h2>Bienvenido, {user.displayName || user.email}</h2>
-          <Logout />
-        </>
-      ) : (
-        <Login />
-      )}
+    <div className="App">
+      <h2>Reto 11: Autenticación con Firebase</h2>
+      <Login />
     </div>
   );
 }
 
 export default App;
+
 
