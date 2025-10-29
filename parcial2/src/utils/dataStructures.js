@@ -52,8 +52,6 @@ export class LinkedList {
 
     return false;
   }
-
-  // Convierte la lista a un arreglo
   toArray() {
     const arr = [];
     let curr = this.head;
@@ -66,7 +64,7 @@ export class LinkedList {
     return arr;
   }
 
-  // Carga los elementos desde un arreglo
+
   fromArray(arr) {
     this.head = null;
     this.tail = null;
