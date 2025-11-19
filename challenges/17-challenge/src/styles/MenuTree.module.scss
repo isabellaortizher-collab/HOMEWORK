@@ -1,0 +1,81 @@
+// =============================================
+// VARIABLES SASS
+// =============================================
+$primary: #4e73df;
+$dark: #1f1f1f;
+$gray: #ccc;
+$transition: 0.3s ease;
+
+// Función personalizada
+@function spacing($multiplier) {
+  @return 4px * $multiplier;
+}
+
+// Mixin reutilizable
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  gap: spacing(2);
+}
+
+// =============================================
+// ESTILOS DEL ARBOL DEL MENÚ
+// =============================================
+.menu-level {
+  list-style: none;
+  padding-left: spacing(4);
+  margin: 0;
+
+  // Anidamiento
+  &-0 {
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: spacing(2);
+  }
+}
+
+.menu-item-header {
+  @include flex-center;
+
+  padding: spacing(2);
+  border-radius: 8px;
+  transition: $transition;
+
+  &:hover {
+    background-color: lighten($primary, 35%);
+    cursor: pointer;
+  }
+}
+
+.expand-btn {
+  border: none;
+  background: $primary;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: $transition;
+
+  &:hover {
+    background: darken($primary, 10%);
+  }
+}
+
+.expand-placeholder {
+  width: 24px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: $dark;
+  font-weight: 500;
+  transition: $transition;
+
+  &:hover {
+    color: $primary;
+    transform: translateX(3px);
+  }
+}

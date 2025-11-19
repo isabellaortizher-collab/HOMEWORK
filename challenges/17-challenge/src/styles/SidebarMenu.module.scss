@@ -1,0 +1,28 @@
+// VARIABLES
+$bg: #f8f9fc;
+$sidebar-bg: #ffffff;
+$border: #e2e2e2;
+$primary: #4e73df;
+
+@mixin shadow {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.sidebar {
+  width: 270px;
+  background: $sidebar-bg;
+  border-right: 1px solid $border;
+  padding: 20px;
+  @include shadow;
+
+  .sidebar-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: $primary;
+    margin-bottom: 16px;
+  }
+
+  .menu-nav {
+    margin-top: 10px;
+  }
+}
